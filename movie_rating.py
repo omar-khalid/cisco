@@ -26,6 +26,9 @@ def cli():
 def rating(name, output):
     movie_url = "{}&t={}".format(OMDBAPI_ENDPOINT, name)
     result = requests.get(movie_url)
+    if result.status_code != 200:
+        print('Error! HTTP {} - {}'.format(result.status_code, result.text))
+        sys.exit(1)
 
     d = json.loads(result.text)
     ratings = d.get('Ratings', [])
