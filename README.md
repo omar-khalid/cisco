@@ -5,7 +5,7 @@ Utility movie_rating is a simple lookup to OMDBAPI for movie ratings given a mov
 
 Install the Python library dependencies from requirement.txt file.
 ```
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 ## Running Python CLI
